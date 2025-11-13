@@ -20,7 +20,18 @@ package day01;
 public class Lesson1 {
 
 	public static void main(String[] args) {
-		/*ここから記入*/
+		System.out.println("出力します");
+		
+		int a1 = 12;
+		// a1に12を代入
+		double b2 = 1.6;
+		String b3 = "こんにちは";
+		boolean d4 = true;
+		
+		System.out.println(a1);	
+		System.out.println(b2);
+		System.out.println(b3);
+		System.out.println(d4);
 
 	}
 
