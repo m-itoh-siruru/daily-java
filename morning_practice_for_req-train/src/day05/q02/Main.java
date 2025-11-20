@@ -54,13 +54,49 @@
 
 package day05.q02;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
-class Main {
-
-	public static void main(String[] args) throws IOException {
-		/*ここから記入*/
-
+// IDを入力するクラス
+class ConsoleReader {
+	public int inputId() throws IOException {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("input id? >> ");
+		String str = reader.readLine();
+		return Integer.parseInt(str); // 整数に変換して返す
 	}
+}
 
+// ログイン認証を行うクラス
+class Validation {
+	public boolean checkId(int id) {
+		return (id == 1111 || id == 2222); // 1111か2222ならtrue、それ以外はfalse
+	}
+}
+
+// メインクラス
+public class Main {
+	public static void main(String[] args) throws IOException {
+		ConsoleReader reader = new ConsoleReader(); // オブジェクト生成
+		Validation validator = new Validation(); // オブジェクト生成
+
+		boolean loggedIn = false; // ログイン状態
+		int id = 0; // 入力ID格納用
+
+		System.out.println("4ケタのログインIDを入力してください");
+
+		while (!loggedIn) { // 未ログイン状態なら繰り返す
+			id = reader.inputId(); // IDを入力
+			loggedIn = validator.checkId(id); // 認証
+
+			if (loggedIn) {
+				System.out.println("ログインに成功しました");
+				System.out.println("ようこそ、ID:" + id + "さん");
+			} else {
+				System.out.println("ログインできません");
+				System.out.println("もう一度入力してください");
+			}
+		}
+	}
 }

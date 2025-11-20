@@ -20,7 +20,19 @@ package day04;
 public class Lesson6 {
 
 	public static void main(String[] args) {
-		/*ここから記入*/
+		String[] str = { "鈴木", "田中", "佐藤" };
+
+		String result = "";
+
+		for (int i = 0; i < str.length; i++)
+			;
+		result += str[i];
+
+		if (i < str.length - 1) {
+			result += ",";
+		}
+
+		System.out.println(result);
 
 	}
 
