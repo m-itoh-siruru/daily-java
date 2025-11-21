@@ -36,10 +36,48 @@
 
 package day06.q01;
 
+// Phoneクラス作成
+class Phone {
+	// フィールド
+	private int fee;
+
+	// メソッド
+	public void initFee() {
+		System.out.println("今月の電話料金を初期化します（\\980）");
+		fee = 980;
+	}
+
+	public void call() {
+		System.out.println("電話をかけます（+\\150）");
+		fee += 150;
+	}
+
+	public int getFee() {
+		return fee;
+	}
+
+	public void setFee(int fee) {
+		this.fee = fee;
+	}
+
+}
+
 class Main {
 
 	public static void main(String[] args) {
-		/*ここから記入*/
+		// Phoneクラスのオブジェクトを生成
+		Phone pho = new Phone();
+		System.out.println("シェアード電話に加入しました");
+
+		// 呼び出す
+		pho.initFee();
+
+		// 好きな回数だけ電話をかける
+		pho.call();
+		pho.call();
+
+		// 結果の表示
+		System.out.println("今月の電話料金は\\" + pho.getFee() + "です");
 
 	}
 

@@ -22,18 +22,19 @@ public class Lesson6 {
 	public static void main(String[] args) {
 		String[] str = { "鈴木", "田中", "佐藤" };
 
-		String result = "";
+		for (int i = 0; i < str.length; i++) {
+		// 配列の要素を“順番に繰り返し取り出す”必要があるからforを使う
 
-		for (int i = 0; i < str.length; i++)
-			;
-		result += str[i];
+			if (i == str.length - 1) {
+				System.out.print(str[i]);
+				// 最後はカンマなし
 
-		if (i < str.length - 1) {
-			result += ",";
+			} else {
+				System.out.print(str[i] + ",");
+				// それ以外はカンマつける
+			}
+
 		}
 
-		System.out.println(result);
-
 	}
-
 }
