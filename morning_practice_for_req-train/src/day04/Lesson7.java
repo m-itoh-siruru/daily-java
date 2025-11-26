@@ -32,13 +32,44 @@ input number?[1-10] >>7
 */
 package day04;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Lesson7 {
 
 	public static void main(String[] args) throws IOException {
 		/*ここから記入*/
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		int answer = 7; // 正解の数
 
+		System.out.println("数当てゲームです。");
+		System.out.println("1-10の整数を入力して下さい");
+
+		while (true) {
+			System.out.print("\ninput number?[1-10] >>");
+			String line = reader.readLine();
+			int num;
+
+			try {
+				num = Integer.parseInt(line); // 入力を整数に変換
+			} catch (NumberFormatException e) {
+				System.out.println("error:1-10の整数を入力してください");
+				continue; // 数字以外は再入力
+			}
+
+			if (num < 1 || num > 10) {
+				System.out.println("error:1-10の整数を入力してください");
+				continue; // 範囲外は再入力
+			}
+
+			if (num == answer) {
+				System.out.println("正解！");
+				break; // 正解ならループ終了
+			} else {
+				System.out.println("残念、はずれです。。。もう一回！");
+			}
+		}
 		/*ここまで記入*/
 
 		System.out.println("\nゲームを終了します");

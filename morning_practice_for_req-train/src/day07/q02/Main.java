@@ -68,7 +68,21 @@ package day07.q02;
 public class Main {
 
 	public static void main(String[] args) {
-		/*ここから記入*/
+		// Member型配列（3人分）
+		Member[] list = new Member[3];
+
+		list[0] = new Member(1, "人見");
+		list[1] = new Member(2, "植木");
+		list[2] = new Member(3, "吉崎");
+
+		// 一覧表示
+		MemberManager.show(list);
+
+		// ID=1を三浦に変更
+		MemberManager.update(list, 1, "三浦");
+
+		// 再度一覧表示
+		MemberManager.show(list);
 
 	}
 

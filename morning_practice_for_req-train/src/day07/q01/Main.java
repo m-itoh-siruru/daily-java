@@ -42,8 +42,16 @@ package day07.q01;
 class Main {
 
 	public static void main(String[] args) {
-		/*ここから記入*/
+		// 要素数3のDrink配列を用意
+		Drink[] drinks = new Drink[3];
 
+		// 配列にオブジェクトを入れる
+		drinks[0] = new Drink(140, "リアル・コーラ");
+		drinks[1] = new Drink(210, "ハイパードライ");
+		drinks[2] = new Drink(); // 初期値のコンストラクタ
+
+		for (Drink d : drinks) {
+			d.show();
+		}
 	}
-
 }

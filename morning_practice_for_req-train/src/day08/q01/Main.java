@@ -49,14 +49,14 @@ class Main {
 
 	public static void main(String[] args) {
 
-		/*Magicクラスの生成、利用*/
+		// Magicクラスの生成、利用
 		Magic magic = new Magic("魔法使い");
-
 		int magicMp = 10;
-
 		magic.attack(magicMp);
 
-		/*ここから記入*/
+		Sorcerer sorcerer = new Sorcerer("魔導士");
+		int sorcererMp = 30;
+		sorcerer.attack(sorcererMp);
 
 	}
 
