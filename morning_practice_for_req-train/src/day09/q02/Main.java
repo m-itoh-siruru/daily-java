@@ -40,7 +40,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*ここから記入*/
+		Instrument[] list = new Instrument[2];
+
+		list[0] = new Piano("Yamaha");
+		list[1] = new Drums("Pearl");
+
+		for (Instrument ins : list) {
+			System.out.println(ins);
+			ins.playMusic();
+
+		}
 
 	}
-
 }
