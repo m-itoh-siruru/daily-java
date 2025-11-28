@@ -15,16 +15,15 @@ public class ConsoleReader {
 		String inputString = br.readLine();
 
 		/* ここに記述 */
-
+		
 		if (!inputString.matches("\\d{4}")) {
 			throw new IllegalInputException("不正な入力:" + inputString);
 		}
-
+		
 		/* 記述終了 */
 
 		pin = Integer.parseInt(inputString);
 		return pin;
 	}
 
-	}
-
+}
