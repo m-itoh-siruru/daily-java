@@ -69,7 +69,7 @@ public class Main {
 	// ここから追記してください
 
 	public static void main(String[] args) {
-
+		
 		Account account = new Account(); // suzuki, 1234, 2000000 が入っている
 		ConsoleReader consoleReader = new ConsoleReader();
 		int inputPin;
