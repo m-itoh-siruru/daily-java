@@ -30,14 +30,25 @@ input number?[1-10] >>7
 
 ゲームを終了します
 */
+
 package day04;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Lesson7クラスは、コンソールで数当てゲームを実行する
+ */
+
 public class Lesson7 {
 
+	/**
+	 * 1〜10 の整数を入力し、正解（7）を当てるまでwhile文で繰り返す
+     * 1〜10 以外の値や数字以外の入力は continue によって再入力させる
+	 * @param args 本プログラムでは使用しない
+	 * @throws IOException 入力読み込み時の例外をスロー
+	 */
 	public static void main(String[] args) throws IOException {
 		/*ここから記入*/
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

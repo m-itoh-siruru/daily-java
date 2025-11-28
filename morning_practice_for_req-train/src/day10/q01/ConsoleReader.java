@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class ConsoleReader {
 
-	public int inputPIN() throws IOException {
+	public int inputPIN() throws IOException, IllegalInputException {
 		int pin = -1;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -16,10 +16,15 @@ public class ConsoleReader {
 
 		/* ここに記述 */
 
+		if (!inputString.matches("\\d{4}")) {
+			throw new IllegalInputException("不正な入力:" + inputString);
+		}
+
 		/* 記述終了 */
 
 		pin = Integer.parseInt(inputString);
 		return pin;
 	}
 
-}
+	}
+
